@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator card">
+            <div class="calculator-display">
+                <input type="text" class="form-control" id="display" disabled>
+            </div>
+            <div class="calculator-keys">
+                <!-- First Row -->
+                <button class="btn btn-light" onclick="addToDisplay('(')">(</button>
+                <button class="btn btn-light" onclick="addToDisplay(')')">)</button>
+                <button class="btn btn-light" onclick="clearMemory()">mc</button>
+                <button class="btn btn-light" onclick="memoryRecall()">mr</button>
+                <button class="btn btn-light" onclick="memoryAdd()">m+</button>
+                <button class="btn btn-danger" onclick="clearDisplay()">C</button>
+
+                <!-- Second Row -->
+                <button class="btn btn-light" onclick="calculateSquare()">x²</button>
+                <button class="btn btn-light" onclick="calculatePower()">xʸ</button>
+                <button class="btn btn-light" onclick="sin()">sin</button>
+                <button class="btn btn-light" onclick="cos()">cos</button>
+                <button class="btn btn-light" onclick="tan()">tan</button>
+                <button class="btn btn-light" onclick="addToDisplay('/')">/</button>
+
+                <!-- Third Row -->
+                <button class="btn btn-light" onclick="calculateSquareRoot()">√</button>
+                <button class="btn btn-light" onclick="calculateCubeRoot()">∛</button>
+                <button class="btn btn-primary" onclick="addToDisplay('7')">7</button>
+                <button class="btn btn-primary" onclick="addToDisplay('8')">8</button>
+                <button class="btn btn-primary" onclick="addToDisplay('9')">9</button>
+                <button class="btn btn-light" onclick="addToDisplay('*')">×</button>
+
+                <!-- Fourth Row -->
+                <button class="btn btn-light" onclick="log()">log</button>
+                <button class="btn btn-light" onclick="ln()">ln</button>
+                <button class="btn btn-primary" onclick="addToDisplay('4')">4</button>
+                <button class="btn btn-primary" onclick="addToDisplay('5')">5</button>
+                <button class="btn btn-primary" onclick="addToDisplay('6')">6</button>
+                <button class="btn btn-light" onclick="addToDisplay('-')">-</button>
+
+                <!-- Fifth Row -->
+                <button class="btn btn-light" onclick="exp()">e</button>
+                <button class="btn btn-light" onclick="pi()">π</button>
+                <button class="btn btn-primary" onclick="addToDisplay('1')">1</button>
+                <button class="btn btn-primary" onclick="addToDisplay('2')">2</button>
+                <button class="btn btn-primary" onclick="addToDisplay('3')">3</button>
+                <button class="btn btn-light" onclick="addToDisplay('+')">+</button>
+
+                <!-- Sixth Row -->
+                <button class="btn btn-light" onclick="factorial()">n!</button>
+                <button class="btn btn-light" onclick="inverse()">1/x</button>
+                <button class="btn btn-primary" onclick="addToDisplay('0')">0</button>
+                <button class="btn btn-primary" onclick="addToDisplay('.')">.</button>
+                <button class="btn btn-success" onclick="calculate()">=</button>
+                <button class="btn btn-light" onclick="backspace()">⌫</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
